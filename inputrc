@@ -1,0 +1,27 @@
+"\C-l": clear-screen
+"\C-p":history-search-backward
+"\C-n":history-search-forward
+"\C-a":beginning-of-line
+"\C-e":end-of-line
+
+Tab: menu-complete
+
+set colored-stats On
+set completion-ignore-case On
+set completion-prefix-display-length 1
+set mark-symlinked-directories On
+set show-all-if-ambiguous On
+set show-all-if-unmodified On
+set visible-stats On
+
+set editing-mode vi
+$if mode=vi
+
+  set keymap vi-command
+  # these are for vi-command mode
+  Control-l: clear-screen
+
+  set keymap vi-insert
+  # these are for vi-insert mode
+  Control-l: clear-screen 
+$endif
