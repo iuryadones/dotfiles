@@ -2,6 +2,9 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+PATH=$PATH:/opt/pypy3.6/pypy/bin
+export PATH
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -121,3 +124,10 @@ alias ls='ls --color=auto'
 set -o vi
 shopt -s autocd
 export PYTHONSTARTUP=~/.pythonrc
+export PATH="$PATH:/opt/mssql-tools/bin"
+export PATH="/usr/local/cuda/bin:${PATH}"
+export LD_LIBRARY_PATH="/usr/local/cuda/lib64:${LD_LIBRARY_PATH}"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
